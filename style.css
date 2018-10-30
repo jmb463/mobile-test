@@ -1,0 +1,22 @@
+.container{
+    border-style: solid;
+}
+
+input {
+    width: 100%;
+    max-width: 1000px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+dt {
+    font-family: "Courier New", Courier, monospace;
+}
+dd {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    margin-bottom: 10px;
+}

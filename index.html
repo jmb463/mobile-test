@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+<head>
+        <meta charset="utf-8" />
+        <title>Mobile detector</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui"/>
+        <link rel="stylesheet" href="style.css" /><meta charset="utf-8">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">  
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>  
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+        <script src="node_modules/mobile-detect/mobile-detect.min.js"></script>
+        <script src="app.js"></script>
+</head>
+
+<body ng-controller="MainCtrl as vm" class="container">
+<h1 class="text-center">Mobile detector</h1>
+<p class="text-center">
+    Welcome to my test, this is made by José Martín Bruno from the second course of development of multiplatform applications.
+</p>
+<h2 class="text-center">Input</h2>
+<label for="userAgent">User-Agent:</label>
+<input id="userAgent" type="text" ng-model="vm.input.userAgent">
+<h2 class="text-center">Result:</h2>
+<dl>
+    <dt ng-repeat-start="item in vm.outcome">
+        {{item.key}}
+    </dt>
+    <dd ng-repeat-end>
+        {{item.val || '-'}}
+    </dd>
+</dl>
+</body>
+</html>
