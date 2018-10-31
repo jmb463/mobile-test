@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />
+        <title>Mobile detector</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui"/>
+        <link rel="stylesheet" href="style.css" /><meta charset="utf-8">
+        <script src="node_modules/mobile-detect/mobile-detect.min.js"></script>
+
+</head>
+
+<body>
+        <div id="navbar">MOBILE-DETECT.JS</div>
+        <button id="boton"onclick="detection()">Click me to detect a mobile</button>
+        <script>
+    
+    function detection(){
+        var detector = new MobileDetect(window.navigator.userAgent)
+
+        console.log("Mobile:" + " " + detector.mobile());
+        console.log("Phone:" + " " + detector.phone());
+        console.log("User Agent: " + " " + detector.userAgent());
+        console.log("Operative System: " + " " + detector.os());
+        console.log("Tablet:" + " " + detector.tablet());
+
+    
+
+    }
+        </script>
+    
+    
+</body>
+</html>
